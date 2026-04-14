@@ -1,6 +1,6 @@
 name: Telegram Test Notification
 on:
-  schedule:
+#  schedule:
 #    - cron: '0 3 * * *' # Runs every day at 8:30 AM
   workflow_dispatch: # Allows manual triggering of the workflow
 
