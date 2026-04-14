@@ -1,2 +1,17 @@
 INFO: 2026-04-13 16:30:08,436: Good Time to buy!
 INFO: 2026-04-13 17:05:54,996: Good Time to buy!
+INFO: 2026-04-14 16:27:15,496: Fetching gold price from IBJA API
+ERROR: 2026-04-14 16:27:17,312: Failed to fetch gold price: 404 Client Error: Not Found for url: https://ibja-api.vercel.app/latest
+INFO: 2026-04-14 16:27:17,387: Saved gold price to C:\Users\CD988GR\OneDrive - EY\Documents\Training\practice\gold_price_alerts\gold_price_tracking.xlsx
+INFO: 2026-04-14 16:27:17,474: Generating gold price alert
+INFO: 2026-04-14 16:27:46,841: Fetching gold price from IBJA API
+ERROR: 2026-04-14 16:27:47,573: Failed to fetch gold price: 404 Client Error: Not Found for url: https://ibja-api.vercel.app/latest
+INFO: 2026-04-14 16:28:07,333: Fetching gold price from IBJA API
+ERROR: 2026-04-14 16:28:08,517: Failed to fetch gold price: 404 Client Error: Not Found for url: https://ibja-api.vercel.app/latest
+INFO: 2026-04-14 16:28:26,495: Saved gold price to C:\Users\CD988GR\OneDrive - EY\Documents\Training\practice\gold_price_alerts\gold_price_tracking.xlsx
+INFO: 2026-04-14 16:28:26,549: Generating gold price alert
+INFO: 2026-04-14 16:28:33,709: Fetching gold price from IBJA API
+ERROR: 2026-04-14 16:28:34,529: Failed to fetch gold price: 404 Client Error: Not Found for url: https://ibja-api.vercel.app/latest
+INFO: 2026-04-14 16:29:22,388: Saved gold price to C:\Users\CD988GR\OneDrive - EY\Documents\Training\practice\gold_price_alerts\gold_price_tracking.xlsx
+INFO: 2026-04-14 16:29:22,439: Generating gold price alert
+INFO: 2026-04-14 16:29:43,984: Fetching gold price from IBJA API

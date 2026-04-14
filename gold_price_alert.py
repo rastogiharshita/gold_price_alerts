@@ -73,6 +73,9 @@ def generate_alert(min_price, max_price, current_price):
 
 if __name__ == "__main__":
     price = get_current_gold_price()
-    append_to_track_sheet(price=price)
-    min_price, max_price = calculate_feasible_price_range()
-    generate_alert(min_price, max_price, price)
+    if price:
+        append_to_track_sheet(price=price)
+        min_price, max_price = calculate_feasible_price_range()
+        generate_alert(min_price, max_price, price)
+    else:
+        tg.send_message_to_telegram("Market closed today !")
