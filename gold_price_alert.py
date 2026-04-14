@@ -6,6 +6,8 @@ import requests
 import urllib3
 import pandas as pd
 
+import telegram_alert as tg
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 log_file = Path(__file__).with_suffix(".log")
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(asctime)s: %(message)s",
@@ -62,10 +64,11 @@ def calculate_feasible_price_range() -> (float, float):
     return mean_price, mean_price * 1.1
 
 def generate_alert(min_price, max_price, current_price):
+    logger.info("Generating gold price alert")
     if min_price <= current_price <= max_price:
-        logger.info("Good Time to buy!")
+        tg.send_message_to_telegram("Good Time to buy!")
     else:
-        logger.info("Too Expensive !! Next time .")
+        tg.send_message_to_telegram("Too Expensive !! Next time .")
 
 if __name__ == "__main__":
     # price = get_current_gold_price()

@@ -1,7 +1,7 @@
 name: Telegram Test Notification
 on:
-#  schedule:
-#    - cron: '0 3 * * *' # Runs every day at 8:30 AM
+  schedule:
+    - cron: '0 3 * * *' # Runs every day at 8:30 AM
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -20,4 +20,4 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python telegram_alert.py
+        run: python gold_price_alert.py
