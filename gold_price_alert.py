@@ -75,4 +75,4 @@ if __name__ == "__main__":
     price = get_current_gold_price()
     append_to_track_sheet(price=price)
     min_price, max_price = calculate_feasible_price_range()
-    # generate_alert(min_price, max_price, price)
+    generate_alert(min_price, max_price, price)
