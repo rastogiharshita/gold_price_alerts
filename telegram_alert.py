@@ -1,7 +1,7 @@
 import os
 import requests
 
-API_TOKEN = os.environ["TELEGRAM_API_TOKEN"]
+API_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 def send_message_to_telegram(text):
