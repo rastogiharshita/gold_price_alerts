@@ -1,4 +1,4 @@
-name: Telegram Test Notification
+name: Gold Price Alert
 on:
   schedule:
     - cron: '0 3 * * *' # Runs every day at 8:30 AM

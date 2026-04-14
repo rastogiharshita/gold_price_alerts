@@ -12,6 +12,7 @@ def send_message_to_telegram(text):
 
 # bot = Bot(token=API_TOKEN)
 # asyncio.run(bot.send_message(chat_id=CHAT_ID,text="This is a test msg for bot"))
-send_message_to_telegram("This is a test msg for bot")
-print("Done !")
+def test_call():
+    send_message_to_telegram("This is a test msg for bot")
+    print("Done !")
 

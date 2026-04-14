@@ -66,12 +66,13 @@ def calculate_feasible_price_range() -> (float, float):
 def generate_alert(min_price, max_price, current_price):
     logger.info("Generating gold price alert")
     if min_price <= current_price <= max_price:
+        tg.send_message_to_telegram(f"Min: {min_price}, Max: {max_price}, Current Price: {current_price}")
         tg.send_message_to_telegram("Good Time to buy!")
     else:
         tg.send_message_to_telegram("Too Expensive !! Next time .")
 
 if __name__ == "__main__":
-    # price = get_current_gold_price()
-    # append_to_track_sheet(price=150881)
+    price = get_current_gold_price()
+    append_to_track_sheet(price=150881)
     min_price, max_price = calculate_feasible_price_range()
-    generate_alert(min_price, max_price, 150881) # todo: need to remove hard-coding of price
+    generate_alert(min_price, max_price, price) # todo: need to remove hard-coding of price
