@@ -21,7 +21,7 @@ SHEET_NAME = "gold_price"
 HEADERS = ("Date", "Gold Price (24K)")
 
 
-def get_current_gold_price() -> str | None:
+def get_current_gold_price() -> float:
     try:
         logger.info("Fetching gold price from IBJA API")
         response = requests.get(url=IBJA_API_URL, timeout=TIMEOUT_SECONDS, verify=False)
@@ -73,6 +73,6 @@ def generate_alert(min_price, max_price, current_price):
 
 if __name__ == "__main__":
     price = get_current_gold_price()
-    append_to_track_sheet(price=150881)
+    append_to_track_sheet(price=price)
     min_price, max_price = calculate_feasible_price_range()
-    generate_alert(min_price, max_price, price)
+    # generate_alert(min_price, max_price, price)
