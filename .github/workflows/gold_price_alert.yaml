@@ -1,7 +1,7 @@
 name: Gold Price Alert
 on:
   schedule:
-    - cron: '0 3 * * *' # Runs every day at 8:30 AM
+    - cron: '0 8 * * *' # Runs every day at 1:30 PM
   workflow_dispatch: # Allows manual triggering of the workflow
 
 permissions:
