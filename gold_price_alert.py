@@ -65,7 +65,7 @@ def calculate_feasible_price_range() -> (float, float):
 
 def generate_alert(min_price, max_price, current_price):
     logger.info("Generating gold price alert")
-    if min_price <= current_price <= max_price:
+    if current_price <= max_price:
         tg.send_message_to_telegram(f"Min: {min_price}, Max: {max_price}, Current Price: {current_price}")
         tg.send_message_to_telegram("Good Time to buy!")
     else:
